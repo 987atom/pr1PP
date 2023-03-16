@@ -1,0 +1,16 @@
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\bin\Debug\PRAKTIKA_1.exe.config
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\bin\Debug\PRAKTIKA_1.exe
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\bin\Debug\PRAKTIKA_1.pdb
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.csproj.AssemblyReference.cache
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\MainWindow.g.cs
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\App.g.cs
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1_MarkupCompile.cache
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1_MarkupCompile.lref
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\MainWindow.baml
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.g.resources
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.Properties.Resources.resources
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.csproj.GenerateResource.cache
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.csproj.CoreCompileInputs.cache
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.exe
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.pdb
