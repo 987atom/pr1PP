@@ -14,3 +14,7 @@ C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.csproj.G
 C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.csproj.CoreCompileInputs.cache
 C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.exe
 C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\PRAKTIKA_1.pdb
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\Page2.g.cs
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\Page2.baml
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\Page1.g.cs
+C:\Users\Matvey\source\repos\PRAKTIKA_1\PRAKTIKA_1\obj\Debug\Page1.baml

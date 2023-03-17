@@ -20,22 +20,21 @@ namespace PRAKTIKA_1
 {
     public partial class MainWindow : Window
     {
-        werhouseTableAdapter werehouse = new werhouseTableAdapter();
-        tipe_of_produktTableAdapter tipe_of_produkt = new tipe_of_produktTableAdapter();
+        
 
         public MainWindow()
         {
             InitializeComponent();
-            werehouseDataGrid.ItemsSource = werehouse.GetData();
-            tipe_of_produktDataGrid.ItemsSource = tipe_of_produkt.GetData();
-            tipe_of_produktDataGrid.DisplayMemberPath = "color";
+            
         }
 
-        private void tipe_of_produktDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            object cell = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[0];
-            MessageBox.Show(cell.ToString());
+            PagFrame.Content = new Page2();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PagFrame.Content = new Page1();
         }
     }
 }
-

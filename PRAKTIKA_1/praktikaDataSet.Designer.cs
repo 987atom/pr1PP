@@ -1333,12 +1333,20 @@ SELECT id_tipe_of_produkt, color, name_of_adress, id_werhouseFK FROM tipe_of_pro
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_tipe_of_produkt, color, name_of_adress, id_werhouseFK FROM dbo.tipe_of_" +
                 "produkt";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[tipe_of_produkt] ([color], [name_of_adress], [id_werhouseFK]) " +
+                "VALUES (@color, @name_of_adress, @id_werhouseFK);";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@color", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "color", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_of_adress", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "name_of_adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_werhouseFK", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_werhouseFK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1543,6 +1551,47 @@ SELECT id_tipe_of_produkt, color, name_of_adress, id_werhouseFK FROM tipe_of_pro
         public virtual int Update(string color, string name_of_adress, global::System.Nullable<int> id_werhouseFK, int Original_id_tipe_of_produkt, string Original_color, string Original_name_of_adress, global::System.Nullable<int> Original_id_werhouseFK) {
             return this.Update(color, name_of_adress, id_werhouseFK, Original_id_tipe_of_produkt, Original_color, Original_name_of_adress, Original_id_werhouseFK, Original_id_tipe_of_produkt);
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(string color, string name_of_adress, global::System.Nullable<int> id_werhouseFK) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((color == null)) {
+                throw new global::System.ArgumentNullException("color");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(color));
+            }
+            if ((name_of_adress == null)) {
+                throw new global::System.ArgumentNullException("name_of_adress");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(name_of_adress));
+            }
+            if ((id_werhouseFK.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(id_werhouseFK.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
     }
     
     /// <summary>
@@ -1715,11 +1764,19 @@ SELECT id_werhouse, adress, room, chelf FROM werhouse WHERE (id_werhouse = @id_w
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_werhouse, adress, room, chelf FROM dbo.werhouse";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[werhouse] ([adress], [room], [chelf]) VALUES (@adress, @room, " +
+                "@chelf);";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@adress", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@room", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "room", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@chelf", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "chelf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1919,6 +1976,47 @@ SELECT id_werhouse, adress, room, chelf FROM werhouse WHERE (id_werhouse = @id_w
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string adress, string room, string chelf, int Original_id_werhouse, string Original_adress, string Original_room, string Original_chelf) {
             return this.Update(adress, room, chelf, Original_id_werhouse, Original_adress, Original_room, Original_chelf, Original_id_werhouse);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(string adress, string room, string chelf) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((adress == null)) {
+                throw new global::System.ArgumentNullException("adress");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(adress));
+            }
+            if ((room == null)) {
+                throw new global::System.ArgumentNullException("room");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(room));
+            }
+            if ((chelf == null)) {
+                throw new global::System.ArgumentNullException("chelf");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(chelf));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
