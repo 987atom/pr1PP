@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace PRAKTIKA_1
 {
-    /// <summary>
-    /// Логика взаимодействия для Page1.xaml
-    /// </summary>
     public partial class Page1 : Page
     {
         int re = 0;
@@ -37,11 +34,6 @@ namespace PRAKTIKA_1
         }
         private void ColourDgr_Click(object sender, RoutedEventArgs e)
         {
-            //object cell = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[0];
-            //String s;
-
-            //s = Convert.ToString(re);
-
             werehouse.InsertQuery(NameTbx.Text, NameTbx_Copy.Text, NameTbx_Copy2.Text);
             werehouseDataGrid.ItemsSource = werehouse.GetData();
         }
@@ -55,10 +47,14 @@ namespace PRAKTIKA_1
         {
             (Application.Current.MainWindow as MainWindow).PagFrame.Content = new Page2();
         }
-        //private void tipe_of_produktDataGrid_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        //{
-        //    object cell = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[0];
-        //    re = (int)cell;
-        //}
+
+        private void del_Click(object sender, RoutedEventArgs e)
+        {
+            object id = (werehouseDataGrid.SelectedItem as DataRowView).Row[0];
+            werehouse.DeleteQuery(Convert.ToInt32(id));
+
+            werehouseDataGrid.ItemsSource = werehouse.GetData();
+
+        }
     }
 }

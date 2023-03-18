@@ -51,5 +51,13 @@ namespace PRAKTIKA_1
             object cell = (NameTbx_Copy1.SelectedItem as DataRowView).Row[0];
             re = (int)cell;
         }
+
+        private void del_Click(object sender, RoutedEventArgs e)
+        {
+            object id = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[0];
+            tipe_of_produkt.DeleteQuery(Convert.ToInt32(id));
+
+            tipe_of_produktDataGrid.ItemsSource = tipe_of_produkt.GetData();
+        }
     }
 }

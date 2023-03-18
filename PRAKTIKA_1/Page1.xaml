@@ -27,5 +27,7 @@
         <TextBox x:Name="NameTbx_Copy1" HorizontalAlignment="Left" Margin="92,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="453" Height="22"/>
         <TextBox x:Name="NameTbx_Copy2" HorizontalAlignment="Left" Margin="92,214,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="453" Height="22"/>
 
+        <Button x:Name="del" Content="Удаление" HorizontalAlignment="Left" Margin="120,323,0,0" VerticalAlignment="Top" Width="161" Height="30" Click="del_Click"/>
+
     </Grid>
 </Page>
