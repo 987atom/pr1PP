@@ -20,6 +20,8 @@ namespace PRAKTIKA_1
     public partial class Page2 : Page
     {
         int re = 0;
+        int whog = 0;
+
         tipe_of_produktTableAdapter tipe_of_produkt = new tipe_of_produktTableAdapter();
         werhouseTableAdapter werhouse = new werhouseTableAdapter();
         public Page2()
@@ -62,9 +64,18 @@ namespace PRAKTIKA_1
 
         private void tipe_of_produktDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NameTbx.Text = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[1].ToString();
-            NameTbx_Copy.Text = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[2].ToString();
-            NameTbx_Copy1.SelectedItem = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[3];
+            if (whog != 1)
+            {
+                NameTbx.Text = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[1].ToString();
+                NameTbx_Copy.Text = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[2].ToString();
+                NameTbx_Copy1.SelectedItem = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[3];
+
+                whog= 1;
+            }
+            else
+            {
+                whog= 0;
+            }
         }
 
 

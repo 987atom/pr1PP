@@ -21,6 +21,8 @@ namespace PRAKTIKA_1
     {
         int re = 0;
 
+        int whog = 0;
+
         werhouseTableAdapter werehouse = new werhouseTableAdapter();
         werhouseTableAdapter tip = new werhouseTableAdapter();
         public Page1()
@@ -59,9 +61,18 @@ namespace PRAKTIKA_1
 
         private void werehouseDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NameTbx.Text = (werehouseDataGrid.SelectedItem as DataRowView).Row[1].ToString();
-            NameTbx_Copy.Text = (werehouseDataGrid.SelectedItem as DataRowView).Row[2].ToString();
-            NameTbx_Copy2.Text = (werehouseDataGrid.SelectedItem as DataRowView).Row[3].ToString();
+            if (whog != 1)
+            {
+                NameTbx.Text = (werehouseDataGrid.SelectedItem as DataRowView).Row[1].ToString();
+                NameTbx_Copy.Text = (werehouseDataGrid.SelectedItem as DataRowView).Row[2].ToString();
+                NameTbx_Copy2.Text = (werehouseDataGrid.SelectedItem as DataRowView).Row[3].ToString();
+
+                whog = 1;
+            }
+            else
+            {
+                whog = 0;
+            }
         }
 
         private void werhouseDGR_Click(object sender, RoutedEventArgs e)
