@@ -60,10 +60,20 @@ namespace PRAKTIKA_1
             tipe_of_produktDataGrid.ItemsSource = tipe_of_produkt.GetData();
         }
 
+        private void tipe_of_produktDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            NameTbx.Text = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[1].ToString();
+            NameTbx_Copy.Text = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[2].ToString();
+            NameTbx_Copy1.SelectedItem = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[3];
+        }
+
+
         private void tip_of_produktDGR_Click(object sender, RoutedEventArgs e)
         {
             object id = (tipe_of_produktDataGrid.SelectedItem as DataRowView).Row[0];
-            tipe_of_produkt.UpdateQuery(NameTbx.Text, NameTbx_Copy.Text, re, Convert.ToInt32(id));
+            object cell = (NameTbx_Copy1.SelectedItem as DataRowView).Row[0];
+            int ccc = (int)cell;
+            tipe_of_produkt.UpdateQuery(NameTbx.Text, NameTbx_Copy.Text, ccc, Convert.ToInt32(id));
 
             tipe_of_produktDataGrid.ItemsSource = tipe_of_produkt.GetData();
         }
