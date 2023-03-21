@@ -21,6 +21,7 @@
         <Button x:Name="ColourDgr" Content="Button" HorizontalAlignment="Left" Margin="590,168,0,0" VerticalAlignment="Top" Height="66" Width="136" Click="ColourDgr_Click"/>
         <ComboBox x:Name="NameTbx_Copy1" HorizontalAlignment="Left" Margin="92,225,0,0" VerticalAlignment="Top" Width="453" Height="19" SelectionChanged="NameTbx_Copy1_SelectionChanged"/>
         <Button x:Name="del" Content="Удаление" HorizontalAlignment="Left" Margin="120,323,0,0" VerticalAlignment="Top" Width="161" Height="30" Click="del_Click"/>
-        
+        <Button x:Name="tip_of_produktDGR" Content="Изменение" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Height="37" Width="310" Click="tip_of_produktDGR_Click"/>
+
     </Grid>
 </Page>

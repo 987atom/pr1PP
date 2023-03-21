@@ -56,5 +56,13 @@ namespace PRAKTIKA_1
             werehouseDataGrid.ItemsSource = werehouse.GetData();
 
         }
+
+        private void werhouseDGR_Click(object sender, RoutedEventArgs e)
+        {
+            object id = (werehouseDataGrid.SelectedItem as DataRowView).Row[0];
+            werehouse.UpdateQuery(NameTbx.Text, NameTbx_Copy.Text, NameTbx_Copy2.Text, Convert.ToInt32(id));
+
+            werehouseDataGrid.ItemsSource = werehouse.GetData();
+        }
     }
 }
